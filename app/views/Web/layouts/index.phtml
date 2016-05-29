@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Ali Sadeghipour Körabbaslu</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="/js/vendor/angular.min.js"></script>
+    </head>
+    <body data-ng-controller="LayoutController" data-ng-cloak>
+        <div class="container">
+            <header>
+                <p class="layout-title">Software Developer | IOT Lover</p>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Me</a></li>
+                    <li><a href="#">Git</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+            <?php
+            echo $this->getContent();
+            ?>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="/js/vendor/angular-resource.min.js"></script>
+        <script src="/js/vendor/angular-sanitize.min.js"></script>
+        <script src="/js/vendor/angular-ui-router.min.js"></script>
+        <script src="/js/vendor/ct-ui-router-extras.min.js"></script>
+        <script src="/js/vendor/ct-ui-router-extras.previous.min.js"></script>
+        <script src="/js/vendor/angular-animate.min.js"></script>
+
+        <script data-main="/js/boot" src="/js/vendor/require.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </body>
+</html>

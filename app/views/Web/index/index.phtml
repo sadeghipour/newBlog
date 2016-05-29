@@ -1,0 +1,14 @@
+<div class="post-pagination" data-ng-controller="IndexController">
+
+    <div class="post-contents">
+        <div class="post-item" data-ng-repeat="post in lastPosts">
+            <h4 class="post-title">{{post.title}}</h4>
+            <p class="post-date">{{post.date}}</p>
+            <img class="post-img" src="{{post.img}}">
+            <p class="post-description">{{post.description}}</p>
+            <a href="{{post.link}}" class="post-detail-link">Read more</a>
+            <div class="post-separator"></div>
+        </div>
+    </div>
+
+</div>

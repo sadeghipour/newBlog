@@ -1,0 +1,68 @@
+body .container  {
+   background-color: #ffffff;
+    background-size:cover;
+    display: block;
+    width: 100%;
+    height: 1280px;
+}
+
+body .container header {
+    margin: 40px auto;
+    width: 280px;
+}
+
+body .container header .layout-title {
+    margin: 0 auto;
+    width: 200px;
+    color: gray;
+}
+
+body .container header ul {
+    border-top: solid 1px #2196F3;
+}
+
+body .container header ul li{
+    display: inline-block;
+    padding-right: 25px;
+}
+body .container header ul li:last-child{
+    padding-right: 0;
+}
+
+body .container header ul .active{
+    border-bottom: 2px solid #2196F3;
+}
+
+body .container .post-pagination {
+    width: 800px;
+    margin: 0 auto;
+    height: auto;
+}
+
+body .container .post-pagination .post-contents {
+    margin: 0 auto;
+
+}
+
+body .container .post-pagination .post-contents .post-item {
+    width: 50%;
+    margin: 0 auto;
+}
+
+body .container .post-pagination .post-contents .post-item .post-date {
+    margin-top: -13px;
+    color: #ababab;
+    font-size: 11px;
+
+}
+
+body .container .post-pagination .post-contents .post-item .post-img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+body .container .post-pagination .post-contents .post-separator {
+    width: 70%;
+    border-bottom: solid 1px #2196F3;
+    margin: 20px auto;
+}
