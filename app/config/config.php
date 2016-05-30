@@ -7,10 +7,10 @@ date_default_timezone_set('Europe/Istanbul');
 return new \Phalcon\Config(array(
     'database' => array(
         'adapter'     => 'Mysql',
-        'host'        => 'localhost',
-        'username'    => 'root',
+        'host'        => '127.0.0.1',
+        'username'    => 'alisch',
         'password'    => '',
-        'dbname'      => 'test',
+        'dbname'      => 'alisch.me',
         'charset'     => 'utf8',
     ),
     'application' => array(
