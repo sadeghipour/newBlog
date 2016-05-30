@@ -1,1 +1,7 @@
 app/config/config.php
+.phalcon/
+app/migrations/
+nano
+public/cgi-bin/
+public/files/
+public/temp/
