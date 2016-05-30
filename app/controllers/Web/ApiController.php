@@ -29,18 +29,19 @@ class ApiController extends ControllerBase
     }
 
     public function testInsertPostAction(){
-            $request = new Request();
-            $response = new Response();
-            $returnVO = new ReturnVO();
-            if($request->isPost()){
-                $getPost = $request->getPost("post");
-                if($getPost){
-                    $result = Posts::insert($getPost);
-                    $returnVO->success = $result;
-                }
+        return;
+        $request = new Request();
+        $response = new Response();
+        $returnVO = new ReturnVO();
+        if($request->isPost()){
+            $getPost = $request->getPost("post");
+            if($getPost){
+                $result = Posts::insert($getPost);
+                $returnVO->success = $result;
             }
-            return $response->setJsonContent($returnVO);
         }
+        return $response->setJsonContent($returnVO);
+    }
 
 
 }
