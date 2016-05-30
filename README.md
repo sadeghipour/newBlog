@@ -1,4 +1,4 @@
-# newBlog 
+# PhalconBlog 
 This is a simple blog.
 Frameworks that used in:
 Back-End: Phalcon
