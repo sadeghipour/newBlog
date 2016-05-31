@@ -5,3 +5,4 @@ nano
 public/cgi-bin/
 public/files/
 public/temp/
+.idea/*
