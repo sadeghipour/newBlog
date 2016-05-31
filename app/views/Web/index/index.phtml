@@ -6,7 +6,7 @@
             <p class="post-date">{{post.date}}</p>
             <img data-ng-if="post.image" class="post-img" src="{{post.image}}">
             <p class="post-description">{{post.description}}</p>
-            <a href="{{post.link}}" class="post-detail-link">Read more</a>
+            <a href="/post/{{post.title}}" class="post-detail-link">Read more</a>
             <div class="post-separator"></div>
         </div>
         <dir-pagination-controls on-page-change="pageChanged(newPageNumber)"></dir-pagination-controls>

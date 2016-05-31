@@ -3,6 +3,7 @@
 $router = new \Phalcon\Mvc\Router();
 $router->setDefaultAction("index");
 $router->setDefaultNamespace("App\Controllers\Web");
+
 $router->add(
     "/:action/:params",
     array(

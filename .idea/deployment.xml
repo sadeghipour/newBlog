@@ -7,6 +7,9 @@
           <mappings>
             <mapping deploy="/var/www/alisch.me" local="$PROJECT_DIR$" web="/" />
           </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/app/config/config.php" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>

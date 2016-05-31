@@ -20,10 +20,24 @@ class ApiController extends ControllerBase
             return $response->setJsonContent($returnVO);
         }
 
+    
+    
+    public function getPostByTitleAction(){
+            $request = new Request();
+            $response = new Response();
+            $returnVO = new ReturnVO();
+            if($request->isPost()){
+                $title = $request->getPost("title");
+                if($title){
+                    $returnVO->success = Posts::getPostByTitle($title)[0];
+                }
+            }
+            return $response->setJsonContent($returnVO);
+        }
+
+
     public function testInsertPostAction(){
         return;
-
-
         $request = new Request();
         $response = new Response();
         $returnVO = new ReturnVO();

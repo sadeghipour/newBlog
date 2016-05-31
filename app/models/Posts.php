@@ -91,6 +91,11 @@ class Posts extends \Phalcon\Mvc\Model
 
     }
 
+    public static function getPostByTitle($title){
+
+        return Posts::find(array("title=?0","bind"=>array($title)))->toArray();
+    }
+
 
     public static function insert($params){
 

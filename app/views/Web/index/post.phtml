@@ -1,0 +1,11 @@
+<div class="post-content" data-ng-controller="PostController">
+
+    <h4>{{post.title}}</h4>
+    <p>{{post.date}}</p>
+   <img data-ng-if="post.image" class="post-img" data-ng-src="{{post.image}}">
+    <p data-ng-bind-html="post.description"></p>
+</div>
+
+<script>
+    var postTitle = <?php echo json_encode($postTitle); ?>;
+</script>
