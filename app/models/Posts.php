@@ -83,6 +83,15 @@ class Posts extends \Phalcon\Mvc\Model
         return parent::findFirst($parameters);
     }
 
+
+    public static function getAllPosts(){
+
+        $posts = Posts::find("is_active=1");
+        return $posts->toArray();
+
+    }
+
+
     public static function insert($params){
 
         $newPost = new Posts();

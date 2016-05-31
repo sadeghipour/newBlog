@@ -4,7 +4,7 @@ app.service('WebService', function ($http) {
     this.getLastestPosts = function ( callbackFunc)
     {
         $http({
-            url: '/api/getLastestPosts',
+            url: '/api/getAllPosts',
             method: 'POST',
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             //data: $.param(params)

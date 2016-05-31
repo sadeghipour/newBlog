@@ -9,7 +9,7 @@ return new \Phalcon\Config(array(
         'adapter'     => 'Mysql',
         'host'        => '127.0.0.1',
         'username'    => 'alisch',
-        'password'    => 'jrQ4jHcDbsprTfz6',
+        'password'    => '************************',
         'dbname'      => 'alisch.me',
         'charset'     => 'utf8',
     ),

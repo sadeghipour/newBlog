@@ -1,8 +1,13 @@
-var app = angular.module('app', ['ngSanitize', "ui.router", 'ct.ui.router.extras']);
+var app = angular.module('app', ['ngSanitize', "ui.router", 'ct.ui.router.extras','angularUtils.directives.dirPagination']);
 
 app.factory("AppData", function () {
     return {};
 });
+
+app.config(function(paginationTemplateProvider) {
+    paginationTemplateProvider.setPath('/html_templates/dirPagination.tpl.html');
+});
+
 
 app.factory("EVENTS", function () {
     return {

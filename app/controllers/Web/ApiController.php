@@ -9,24 +9,16 @@ use Phalcon\Http\Response;
 class ApiController extends ControllerBase
 {
 
-    public function getLastestPostsAction(){
-        $request = new Request();
-        $response = new Response();
-        $returnVO = new ReturnVO();
-        if($request->isPost()){
+    public function getAllPostsAction(){
+            $request = new Request();
+            $response = new Response();
+            $returnVO = new ReturnVO();
+            if($request->isPost()){
 
-            $returnDummy = [array(
-                "title"=>"Title Dummy",
-                "img"=>"/img/background_image.jpg",
-                "description"=>"Description",
-                "date"=>"19/06/2016",
-                "link"=>"post/angular-js-ui-router"
-            )];
-
-            $returnVO->success = $returnDummy;
+                $returnVO->success = Posts::getAllPosts();
+            }
+            return $response->setJsonContent($returnVO);
         }
-        return $response->setJsonContent($returnVO);
-    }
 
     public function testInsertPostAction(){
         return;
