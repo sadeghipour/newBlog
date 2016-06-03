@@ -4,7 +4,7 @@
         <div class="post-item" data-dir-paginate="post in lastPosts | itemsPerPage: 10">
             <h4 class="post-title">{{post.title}}</h4>
             <p class="post-date">{{post.date}}</p>
-            <img data-ng-if="post.image[0]" class="post-img" src="{{post.image[0]}}">
+            <img data-ng-if="post.image[0]" class="post-img" data-ng-src="{{post.image}}">
             <p class="post-description" data-ng-bind-html="post.description"></p>
             <a href="/post/{{post.title}}" class="post-detail-link">Read more</a>
             <div class="post-separator"></div>
