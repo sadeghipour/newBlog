@@ -13,6 +13,14 @@ class IndexController extends ControllerBase
         $this->view->setVar("postTitle",$title);
     }
 
+    public function meAction(){
+
+    }
+
+    public function contactAction(){
+
+    }
+
     public function show404Action(){
 
     }

@@ -3,7 +3,7 @@ body .container  {
     background-size:cover;
     display: block;
     width: 100%;
-    height: 1280px;
+    height: auto;
 }
 
 body .container header {
@@ -34,7 +34,7 @@ body .container header ul .active{
 }
 
 body .container .post-pagination {
-    width: 800px;
+
     margin: 0 auto;
     height: auto;
 }
@@ -75,4 +75,15 @@ body .container .post-content {
 body .container .post-content .post-img {
     width: 100%;
     margin: 0 auto;
+}
+
+body .container .post-content .banner-block .main-slide-animation .gallery-controller{
+    width: 15%;
+    margin: 0 auto;
+}
+body .container .post-content .banner-block .main-slide-animation .gallery-controller  .next {
+    float: right;
+}
+body .container .post-content .banner-block .main-slide-animation .gallery-controller .prev {
+    float: left;
 }

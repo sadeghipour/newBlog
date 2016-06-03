@@ -10,30 +10,42 @@ class ApiController extends ControllerBase
 {
 
     public function getAllPostsAction(){
-            $request = new Request();
-            $response = new Response();
-            $returnVO = new ReturnVO();
-            if($request->isPost()){
+        $request = new Request();
+        $response = new Response();
+        $returnVO = new ReturnVO();
+        if($request->isPost()){
 
-                $returnVO->success = Posts::getAllPosts();
-            }
-            return $response->setJsonContent($returnVO);
-        }
-
-    
-    
-    public function getPostByTitleAction(){
-            $request = new Request();
-            $response = new Response();
-            $returnVO = new ReturnVO();
-            if($request->isPost()){
-                $title = $request->getPost("title");
-                if($title){
-                    $returnVO->success = Posts::getPostByTitle($title)[0];
+            $allPosts = Posts::getAllPosts();
+            foreach ($allPosts as $key=>$allPost) {
+                foreach ($allPost as $k=>$i) {
+                    if($k=="image"){
+                        $allPosts[$key][$k]= explode(",",$i);
+                    }
                 }
             }
-            return $response->setJsonContent($returnVO);
+            $returnVO->success = $allPosts;
         }
+        return $response->setJsonContent($returnVO);
+    }
+
+
+
+    public function getPostByTitleAction(){
+        $request = new Request();
+        $response = new Response();
+        $returnVO = new ReturnVO();
+        if($request->isPost()){
+            $title = $request->getPost("title");
+            if($title){
+                $lastPost = Posts::getPostByTitle($title)[0];
+                if($lastPost["image"]){
+                    $lastPost["image"] = explode(",",$lastPost["image"]);
+                }
+                $returnVO->success = $lastPost;
+            }
+        }
+        return $response->setJsonContent($returnVO);
+    }
 
 
     public function testInsertPostAction(){

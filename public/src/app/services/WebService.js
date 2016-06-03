@@ -1,7 +1,7 @@
 app.service('WebService', function ($http) {
 
 
-    this.getLastestPosts = function ( callbackFunc)
+    this.getAllPosts = function ( callbackFunc)
     {
         $http({
             url: '/api/getAllPosts',

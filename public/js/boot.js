@@ -9,10 +9,10 @@ if (isProd === true) {
 } else {
 
     //EDIT APPLICATION FILE LIST//
-    var controllers = ["IndexController","LayoutController","PostController"];
+    var controllers = ["IndexController","LayoutController","PostController","BannerController"];
     var services = ["WebService"];
     var filters = [];
-    var directives = [];
+    var directives = ["custom-directives"];
     ////EDIT APPLICATION FILE LIST//
 
     paths = {init: "src/init"};
