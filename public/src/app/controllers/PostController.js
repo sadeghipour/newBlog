@@ -7,6 +7,9 @@ app.controller('PostController', function ($scope,WebService,$location,$window) 
 
         WebService.getPostByTitle(params, function (result) {
             $scope.post = result && result.success?result.success:null;
+            if ($scope.post) {
+                document.title = document.title+" | "+$scope.post.title;
+            }
         })
     };
 
