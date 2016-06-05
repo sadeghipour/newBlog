@@ -12,6 +12,7 @@ app.config(function(paginationTemplateProvider) {
 app.factory("EVENTS", function () {
     return {
         TODO_ADDED: "todo_added",
-        TODO_DELETED: "todo_added"
+        TODO_DELETED: "todo_added",
+        DATA_CHANGED:"data-changed"
     };
 });

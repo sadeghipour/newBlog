@@ -51,6 +51,10 @@ class Posts extends \Phalcon\Mvc\Model
      */
     public $visit_count;
 
+
+
+    public $meta_tags;
+
     /**
      * Returns table name mapped in the model.
      *
@@ -86,14 +90,14 @@ class Posts extends \Phalcon\Mvc\Model
 
     public static function getAllPosts(){
 
-        $posts = Posts::find("is_active=1");
+        $posts = parent::find("is_active=1");
         return $posts->toArray();
 
     }
 
     public static function getPostByTitle($title){
 
-        return Posts::find(array("title=?0","bind"=>array($title)))->toArray();
+        return parent::find(array("title=?0","bind"=>array($title)))->toArray();
     }
 
 
