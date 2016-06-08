@@ -5,6 +5,7 @@ use App\LogicLayer\ReturnVO;
 use App\Models\Posts;
 use Phalcon\Http\Request;
 use Phalcon\Http\Response;
+use Phalcon\Mvc\View;
 
 class ApiController extends ControllerBase
 {
@@ -61,6 +62,14 @@ class ApiController extends ControllerBase
             }
         }
         return $response->setJsonContent($returnVO);
+    }
+
+    public function getPartialAction($param){
+
+        $view = new View();
+        $view->setViewsDir("../app/views/Web");
+        $view->partial('index/'.$param);
+        return null;
     }
 
 

@@ -3,7 +3,7 @@
     <h4>{{post.title}}</h4>
     <p>{{post.date}}</p>
     <div class="banner-block" data-ng-controller="BannerController">
-        <div class="main-slide-animation nonDraggableImage" data-ng-repeat="banner in post.image track by $index"  data-ng-hide="!isCurrentSlideIndex($index)" data-ng-swipe-right="nextSlide()" data-ng-swipe-left="prevSlide()">
+        <div class="main-slide-animation non-draggable-image" data-ng-repeat="banner in post.image track by $index"  data-ng-hide="!isCurrentSlideIndex($index)" data-ng-swipe-right="nextSlide()" data-ng-swipe-left="prevSlide()">
 
             <img class="post-img" src="{{banner}}" alt="{post.title}}">
             <div data-ng-if="post.image.length>1" class="gallery-controller">

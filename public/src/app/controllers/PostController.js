@@ -1,8 +1,8 @@
-app.controller('PostController', function ($scope,WebService,$location,$window,$sce,$timeout,$rootScope,EVENTS) {
+app.controller('PostController', function ($scope,WebService,$location,$window,$sce,$timeout,$rootScope,EVENTS,$stateParams) {
 
     $scope.init = function () {
         var params = {
-            title : $window.postTitle
+            title : $stateParams.title
         };
 
         WebService.getPostByTitle(params, function (result) {

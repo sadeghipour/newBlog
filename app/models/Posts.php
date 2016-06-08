@@ -90,7 +90,7 @@ class Posts extends \Phalcon\Mvc\Model
 
     public static function getAllPosts(){
 
-        $posts = parent::find("is_active=1");
+        $posts = parent::find(array("is_active=1","order"=>"date DESC"));
         return $posts->toArray();
 
     }
