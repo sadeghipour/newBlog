@@ -1,4 +1,3 @@
-app.controller('LayoutController', function ($scope,WebService) {
-
+app.controller('LayoutController', function ($scope,WebService,AppData) {
 
 });

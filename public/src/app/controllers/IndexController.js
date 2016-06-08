@@ -1,4 +1,6 @@
-app.controller('IndexController', function ($scope,WebService) {
+app.controller('IndexController', function ($scope,WebService,AppData) {
+
+    document.title = AppData.DOC_TITLE;
 
     WebService.getAllPosts(function (result) {
         $scope.lastPosts = result && result.success ? result.success : null;

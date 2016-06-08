@@ -5,7 +5,7 @@ var paths, shims, allFiles;
 if (isProd === true) {
     allFiles = ["gapp"];
     shims = [];
-    paths = {gapp: "js/gapp.min"};
+    paths = {gapp: "js/minify"};
 } else {
 
     //EDIT APPLICATION FILE LIST//

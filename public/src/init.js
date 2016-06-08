@@ -1,7 +1,10 @@
 var app = angular.module('app', ['ngSanitize', "ui.router", 'ct.ui.router.extras','angularUtils.directives.dirPagination']);
 
 app.factory("AppData", function () {
-    return {};
+    return {
+        "DOC_TITLE":"Ali Sadeghipour Körabbaslu"
+
+    };
 });
 
 
@@ -9,7 +12,8 @@ app.factory("EVENTS", function () {
     return {
         TODO_ADDED: "todo_added",
         TODO_DELETED: "todo_added",
-        DATA_CHANGED:"data-changed"
+        DATA_CHANGED:"data-changed",
+        ON_STATE_CHANGED: "on-state-changed",
     };
 });
 
