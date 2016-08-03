@@ -105,4 +105,21 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlM
         }
     });
 
+    $stateProvider.state("farsi", {
+        url: "/farsi",
+        views: {
+            main: {
+                templateUrl: function($state, $stateParams) {
+                    return "/api/get-partial/farsi"
+                },
+                controller: "ContactController"
+            }
+
+        },
+        onEnter: function($rootScope, $stateParams, EVENTS) {
+
+            console.log("onEnter post Farsi");
+        }
+    });
+
 });
