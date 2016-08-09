@@ -123,3 +123,29 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlM
     });
 
 });
+
+
+app.run(function ($rootScope, $location, $http, AppData,$timeout,WebService,EVENTS,$window)
+{
+    $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams)
+    {
+
+    });
+
+    $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams)
+    {
+        window.ga('send', 'pageview', { page: $location.url() });
+    });
+
+
+    $rootScope.$on('$routeChangeStart', function (event, next, current)
+    {
+
+    });
+
+    $rootScope.$on('$routeChangeSuccess', function (event, next, current)
+    {
+
+    })
+}
+);
