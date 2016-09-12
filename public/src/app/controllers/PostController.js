@@ -4,7 +4,7 @@ app.controller('PostController', function ($scope,WebService,$location,$window,$
         var params = {
             title : $stateParams.title
         };
-        document.title = AppData.DOC_TITLE+" | "+ $stateParams.title;
+        document.title = AppData.DOC_TITLE+" | "+ $stateParams.title.replaceAll("-"," ");
 
         WebService.getPostByTitle(params, function (result) {
             $scope.post = result && result.success?result.success:null;
