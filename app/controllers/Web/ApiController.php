@@ -29,14 +29,12 @@ class ApiController extends ControllerBase
         return $response->setJsonContent($returnVO);
     }
 
-
-
     public function getPostByTitleAction(){
         $request = new Request();
         $response = new Response();
         $returnVO = new ReturnVO();
         if($request->isPost()){
-            $title = $request->getPost("title");
+            $title = str_replace("-"," ",$request->getPost("title"));
             if($title){
                 $lastPost = Posts::getPostByTitle($title)[0];
                 if($lastPost["image"]){
@@ -47,7 +45,6 @@ class ApiController extends ControllerBase
         }
         return $response->setJsonContent($returnVO);
     }
-
 
     public function testInsertPostAction(){
         return;

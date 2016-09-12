@@ -8,9 +8,8 @@ class IndexController extends ControllerBase
 
     }
 
-    public function postAction($title){
+    public function postAction(){
 
-        $this->view->setVar("postTitle",$title);
     }
 
     public function meAction(){

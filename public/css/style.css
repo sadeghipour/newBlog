@@ -73,6 +73,13 @@ body .container .post-pagination .post-contents .post-separator {
     margin: 20px auto;
 }
 
+
+
+body .container .post-pagination .post-contents .post-item .pagination-content{
+    width: 30%;
+    margin: 0 auto;
+}
+
 body .container .post-content {
     width: 70%;
     margin: 20px auto;

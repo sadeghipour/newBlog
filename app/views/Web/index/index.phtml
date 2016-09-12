@@ -8,10 +8,14 @@
                 <img data-ng-if="post.image[0]" class="post-img" data-ng-src="{{post.image}}">
             </div>
             <p class="post-description" data-ng-bind-html="post.description"></p>
-            <a href="/post/{{post.title}}" class="post-detail-link">Read more</a>
+            <a href="/post/{{post.link}}" class="post-detail-link">Read more</a>
             <div class="post-separator"></div>
+            <div class="pagination-content">
+                <dir-pagination-controls on-page-change="pageChanged(newPageNumber)"></dir-pagination-controls>
+            </div>
+
         </div>
-        <dir-pagination-controls on-page-change="pageChanged(newPageNumber)"></dir-pagination-controls>
+
     </div>
 
 </div>
