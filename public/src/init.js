@@ -7,7 +7,6 @@ app.factory("AppData", function () {
     };
 });
 
-
 app.factory("EVENTS", function () {
     return {
         TODO_ADDED: "todo_added",
@@ -20,7 +19,6 @@ app.factory("EVENTS", function () {
 app.config(function(paginationTemplateProvider) {
     paginationTemplateProvider.setPath('/html_templates/dirPagination.tpl.html');
 });
-
 
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlMatcherFactoryProvider) {
     $urlMatcherFactoryProvider.strictMode(true),
@@ -121,5 +119,11 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlM
             console.log("onEnter post Farsi");
         }
     });
+});
 
+app.config(function logic(){
+    String.prototype.replaceAll = function(str1, str2, ignore)
+    {
+        return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+    }
 });
