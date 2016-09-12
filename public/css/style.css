@@ -13,13 +13,14 @@ body .container header {
 
 body .container header .layout-title {
     margin: 0 auto;
-    width: 200px;
+    width: 73%;
     color: gray;
 }
 
 body .container header ul {
     border-top: solid 1px #2196F3;
 }
+
 
 body .container header ul li{
     display: inline-block;
