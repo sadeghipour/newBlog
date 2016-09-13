@@ -9,6 +9,8 @@ app.controller('PostController', function ($scope,WebService,$location,$window,$
         WebService.getPostByTitle(params, function (result) {
             $scope.post = result && result.success?result.success:null;
             if ($scope.post) {
+                $rootScope.keywords = $scope.post.meta_tags;
+                $scope.post.meta_tags = $scope.post.meta_tags.split(",");
                 $scope.post.description = $sce.trustAsHtml($scope.post.description);
             }
         })

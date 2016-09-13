@@ -51,7 +51,7 @@ body .container .post-pagination .post-contents .post-item {
 }
 
 body .container .post-pagination .post-contents .post-item .post-date {
-    margin-top: -13px;
+    margin-top: -10px;
     color: #ababab;
     font-size: 11px;
 
@@ -89,6 +89,24 @@ body .container .post-content {
 body .container .post-content .post-img {
     width: 100%;
     margin: 0 auto;
+}
+
+body .container .post-content .tag-cloud {
+    max-width: 300px;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    top: 0;
+    margin: 20px 50px;
+    border: gray 1px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    max-height: 200px;
+    overflow: auto;
+}
+body .container .post-content .tag-cloud h3 {
+    border-bottom: 1px solid #ababab;
 }
 
 body .container .post-content .banner-block .main-slide-animation.non-draggable-image {

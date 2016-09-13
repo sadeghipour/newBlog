@@ -9,7 +9,7 @@ if (isProd === true) {
 } else {
 
     //EDIT APPLICATION FILE LIST//
-    var controllers = ["IndexController","LayoutController","PostController","BannerController","MeController","ContactController"];
+    var controllers = ["IndexController","LayoutController","PostController","BannerController","MeController","ContactController","HeaderController"];
     var services = ["WebService"];
     var filters = [];
     var directives = ["custom-directives"];
