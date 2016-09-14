@@ -130,6 +130,15 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlM
     });
 });
 
+
+
+app.run(function ($rootScope, $location) {
+    $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams)
+    {
+        window.ga('send', 'pageview', { page: $location.url() });
+    });
+});
+
 app.config(function logic(){
     String.prototype.replaceAll = function(str1, str2, ignore)
     {
