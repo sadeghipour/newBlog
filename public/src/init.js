@@ -74,7 +74,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlM
         },
         onEnter: function($rootScope, $stateParams, EVENTS) {
 
-            console.log("onEnter post view");
+            console.log("onEnter post");
         }
     });
 
@@ -91,7 +91,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlM
         },
         onEnter: function($rootScope, $stateParams, EVENTS) {
 
-            console.log("onEnter post me");
+            console.log("onEnter me");
         }
     });
 
@@ -108,7 +108,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlM
         },
         onEnter: function($rootScope, $stateParams, EVENTS) {
 
-            console.log("onEnter post Contact");
+            console.log("onEnter Contact");
         }
     });
 
@@ -125,7 +125,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlM
         },
         onEnter: function($rootScope, $stateParams, EVENTS) {
 
-            console.log("onEnter post Farsi");
+            console.log("onEnter Farsi");
         }
     });
 });

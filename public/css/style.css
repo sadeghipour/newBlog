@@ -50,6 +50,11 @@ body .container .post-pagination .post-contents .post-item {
     margin: 0 auto;
 }
 
+body .container .post-pagination .post-contents .post-item .post-description {
+    margin: 10px 0;
+}
+
+
 body .container .post-pagination .post-contents .post-item .post-date {
     margin-top: -10px;
     color: #ababab;

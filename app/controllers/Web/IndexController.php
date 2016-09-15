@@ -3,6 +3,8 @@ namespace App\Controllers\Web;
 
 
 use App\Models\Posts;
+use App\Models\VisitIp;
+use Phalcon\Http\Request;
 
 class IndexController extends ControllerBase
 {

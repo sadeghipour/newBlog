@@ -3,6 +3,7 @@ namespace App\Controllers\Web;
 
 use App\LogicLayer\ReturnVO;
 use App\Models\Posts;
+use App\Models\VisitIp;
 use Phalcon\Http\Request;
 use Phalcon\Http\Response;
 use Phalcon\Mvc\View;
@@ -15,6 +16,14 @@ class ApiController extends ControllerBase
         $response = new Response();
         $returnVO = new ReturnVO();
         if($request->isPost()){
+
+            if($request->getURI() != "/favicon.ico"){
+                $visit_ip = new VisitIp();
+                $visit_ip->ip = $request->getClientAddress();
+                $visit_ip->date = date("Y/m/d H:i:s");
+                $visit_ip->page = "/";
+                $visit_ip->save();
+            }
 
             $allPosts = Posts::getAllPosts();
             foreach ($allPosts as $key=>$allPost) {
@@ -34,6 +43,15 @@ class ApiController extends ControllerBase
         $response = new Response();
         $returnVO = new ReturnVO();
         if($request->isPost()){
+
+            if($request->getURI() != "/favicon.ico"){
+                $visit_ip = new VisitIp();
+                $visit_ip->ip = $request->getClientAddress();
+                $visit_ip->date = date("Y/m/d H:i:s");
+                $visit_ip->page = $request->getPost("title");
+                $visit_ip->save();
+            }
+
             $title = str_replace("-"," ",$request->getPost("title"));
             if($title){
                 $lastPost = Posts::getPostByTitle($title)[0];
@@ -66,7 +84,7 @@ class ApiController extends ControllerBase
         $view = new View();
         $view->setViewsDir("../app/views/Web");
         $view->partial('index/'.$param);
-        return null;
+        //return null;
     }
 
 

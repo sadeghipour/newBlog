@@ -4,15 +4,31 @@ defined('APP_PATH') || define('APP_PATH', realpath('.'));
 
 date_default_timezone_set('Europe/Istanbul');
 
+$dev_db = array(
+
+    'adapter'     => 'Mysql',
+    'host'        => '127.0.0.1',
+    'username'    => 'alisch',
+    'password'    => 'n8Jhc5jghmtefAlG',
+    'dbname'      => 'alisch.me',
+    'charset'     => 'utf8',
+
+);
+
+
+$prod_db = array(
+    'adapter'     => 'Mysql',
+    'host'        => '127.0.0.1',
+    'username'    => 'alisch',
+    'password'    => '************************',
+    'dbname'      => 'alisch.me',
+    'charset'     => 'utf8',
+);
+
 return new \Phalcon\Config(array(
-    'database' => array(
-        'adapter'     => 'Mysql',
-        'host'        => '127.0.0.1',
-        'username'    => 'alisch',
-        'password'    => '************************',
-        'dbname'      => 'alisch.me',
-        'charset'     => 'utf8',
-    ),
+
+    'database' => $prod_db,
+
     'application' => array(
         'controllersDir' => APP_PATH . '/app/controllers/',
         'modelsDir'      => APP_PATH . '/app/models/',
