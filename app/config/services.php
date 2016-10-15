@@ -117,7 +117,7 @@ $di->set(
                         $dispatcher->forward(
                             array(
                                 'namespace' => 'App\Controllers\Web',
-                                'controller' => 'error',
+                                'controller' => 'index',
                                 'action'     => 'show404',
                             )
                         );

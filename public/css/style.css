@@ -129,3 +129,11 @@ body .container .post-content .banner-block .main-slide-animation .gallery-contr
 body .container .post-content .banner-block .main-slide-animation .gallery-controller .prev {
     float: left;
 }
+
+
+ /* 404show */
+
+body .container .post-content .container404 {
+    width: 50%;
+    margin: 0 auto;
+}

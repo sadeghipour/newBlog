@@ -26,8 +26,9 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlM
             enabled: true,
             requireBase: false
         }),
+        $locationProvider.hashPrefix('!'),
 
-        $urlRouterProvider.otherwise("/"),
+        $urlRouterProvider.otherwise("/show404"),
 
         $stateProvider.state("index", {
             url: "/",
@@ -126,6 +127,34 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlM
         onEnter: function($rootScope, $stateParams, EVENTS) {
 
             console.log("onEnter Farsi");
+        }
+    });
+
+    $stateProvider.state("show404", {
+        url: "/show404",
+        params: {
+            title: {squash: true, value: null}
+        },
+        views: {
+            main: {
+                templateUrl: function($state, $stateParams) {
+                    return  "/api/get-partial/show404"
+                }
+            }
+
+        },
+        onEnter: function($rootScope, $stateParams, EVENTS) {
+
+            $rootScope.keywords = "Angular 2, AngularJS, Phalcon, Webpack, Ali SadeghipourKorabaslo, Ali Körabbaslu, Full Stack Developer,ZF2,SailsJS, Swift 3, iOS, xCode";
+            console.log("onEnter Index");
+
+            $rootScope.facebook = {
+                url:window.location.protocol+"//"+window.location.hostname,
+                title:"Alisch.me",
+                description:"I Love Coding, Bearing, Baking and Biking :D",
+                image:window.location.protocol+"//"+window.location.hostname+"/img/istanbul.jpg",
+
+            }
         }
     });
 });
