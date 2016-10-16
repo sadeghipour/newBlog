@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Europe/Istanbul');
 
 error_reporting(E_ALL);
 
