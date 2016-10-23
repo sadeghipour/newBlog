@@ -7,13 +7,28 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>https://alisch.me/</loc>
+  <loc>http://alisch.me/</loc>
 </url>
 <url>
-  <loc>https://alisch.me/resume/Ali-resume.pdf</loc>
+  <loc>http://alisch.me/resume/Ali-resume.pdf</loc>
   <lastmod>2016-08-03T08:57:26+00:00</lastmod>
 </url>
 <url>
-  <loc>https://alisch.me/post</loc>
+  <loc>http://alisch.me/contact</loc>
+</url>
+<url>
+  <loc>https://alisch.me/post/How-to-pass-data-from-Component-to-Directive-in-Angular-2</loc>
+</url>
+<url>
+  <loc>https://alisch.me/post/AngularJS-and-Grunt</loc>
+</url>
+<url>
+  <loc>https://alisch.me/post/Angular-Translate</loc>
+</url>
+<url>
+  <loc>https://alisch.me/post/SailsJS</loc>
+</url>
+<url>
+    <loc>https://alisch.me/post/NgZone</loc>
 </url>
 </urlset>
