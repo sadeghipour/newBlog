@@ -34,8 +34,14 @@ body .container header ul .active{
     border-bottom: 2px solid #2196F3;
 }
 
-body .container .post-pagination {
 
+body .container .post-pagination {
+    margin: 0 auto;
+    height: auto;
+}
+
+body .container .post-pagination .post-contents .pagination-content{
+    width:200px;
     margin: 0 auto;
     height: auto;
 }

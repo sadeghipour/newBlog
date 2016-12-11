@@ -1,7 +1,6 @@
 <div class="post-pagination">
-
     <div class="post-contents">
-        <div class="post-item" data-dir-paginate="post in lastPosts | itemsPerPage: 10">
+        <div class="post-item" data-dir-paginate="post in lastPosts | itemsPerPage: 5">
             <h1 class="post-title">{{post.title}}</h1>
             <p class="post-date">{{post.date}}</p>
             <div class="post-contents-image">
@@ -10,12 +9,9 @@
             <p class="post-description" data-ng-bind-html="post.description"></p>
             <a href="/post/{{post.link}}" class="post-detail-link">Read more</a>
             <div class="post-separator"></div>
-            <div class="pagination-content">
-                <dir-pagination-controls on-page-change="pageChanged(newPageNumber)"></dir-pagination-controls>
-            </div>
-
         </div>
-
+        <div class="pagination-content">
+            <dir-pagination-controls on-page-change="pageChanged(newPageNumber)"></dir-pagination-controls>
+        </div>
     </div>
-
 </div>
